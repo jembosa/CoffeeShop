@@ -1,10 +1,18 @@
 ﻿@model List<Product>
 
 <!--Razor has all of the same loops as C#, generally you tend to use foreach or for most of the time-->
-
+<style>
+    body {
+        background-image: url('https://static1.squarespace.com/static/5d6d67f2387da800015dc00e/t/637d7b8f9bef8e307b8e135b/1669168026810/Plants2.jpeg?format=1500w');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
 @foreach(Product p in Model)
 {
-    <div style="margin-bottom:20px; border: 3px solid black">
+    <div style="margin-bottom:20px; border: 3px solid black;background-color: white ">
+              
         <!--The at symbol symbol next to a variable means print it into the HTML-->
         <h2>@p.Name</h2>
         <p>Id: @p.Id</p>       
