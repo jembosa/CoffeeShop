@@ -1,0 +1,19 @@
+﻿@model Product
+
+<h2>Update @Model.Name</h2>
+
+<form method="post">
+    <p>Name</p>
+    <input type="text" name="Name" maxlength="20" value="@Model.Name" />
+
+    <p>Description</p>
+    <input type="text" name="Description" value="@Model.Description" />
+
+    <p>Price</p>
+    <input type="number" name="Price" min="0" max="100" value="@Model.Price"/>
+
+    <p>Description</p>
+    <input type="text" name="Description" maxlength="20" value="@Model.Description"/>
+
+    <input type="submit" value="Update" />
+</form>

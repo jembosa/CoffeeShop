@@ -1,0 +1,18 @@
+﻿@model List<Product>
+
+<!--Razor has all of the same loops as C#, generally you tend to use foreach or for most of the time-->
+
+@foreach(Product p in Model)
+{
+    <div style="margin-bottom:20px; border: 3px solid black">
+        <!--The at symbol symbol next to a variable means print it into the HTML-->
+        <h2>@p.Name</h2>
+        <p>Id: @p.Id</p>       
+        <!--if a route needs some kind of data, commonly a primary, you may pass it along by using the asp-route-NAMEOFVAR -->
+        <a asp-action="Product" asp-controller="Home" asp-route-Id="@p.Id"><p>View @p.Name</p></a>
+        <a asp-action="UpdateProduct" asp-controller="Home" asp-route-Id="@p.Id"><p>Update @p.Name</p></a>
+        <a asp-action="DeleteProduct" asp-controller="Home" asp-route-Id="@p.Id"><p>Delete @p.Name</p></a>
+    </div>
+}
+
+<a asp-action="CreateProduct" asp-controller="Home">Add in a new product</a>
