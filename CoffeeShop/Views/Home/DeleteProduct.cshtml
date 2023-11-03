@@ -2,9 +2,9 @@
 
 <h2>Are you sure you want to delete @Model.Name</h2>
 <p>Id: @Model.Id</p>
-<p>Release Year: @Model.Description</p>
-<p>Genre: @Model.Price</p>
-<p>Run Time: @Model.Category</p>
+<p>Description: @Model.Description</p>
+<p>Price: @Model.Price</p>
+<p>Category: @Model.Category</p>
 
 <a asp-action="IAmSureDeleteProduct" asp-controller="Home" asp-route-Id="@Model.Id"><p>Yes delete this Product</p></a>
 <a asp-action="Index" asp-controller="Home"><p>No take me back to the index</p></a>
